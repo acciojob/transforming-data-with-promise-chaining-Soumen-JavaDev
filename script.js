@@ -19,7 +19,8 @@ btn.addEventListener("click",()=>{
 		output.innerHTML=`Result:${res}`;
 		return Fifth(res);
 	}).then((res)=>{
-		output.innerHTML=`Result:${res}`;
+		output.innerHTML = `Final Result: ${res}`;
+
 	})
 
 })
