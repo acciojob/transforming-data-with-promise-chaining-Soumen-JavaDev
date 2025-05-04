@@ -7,19 +7,19 @@ btn.addEventListener("click",()=>{
 	let val=Number(input.value.trim());
 	initial(val).then((res)=>{
 		
-		output.innerHTML=res;
+		output.innerHTML="Result:${res}";
 		return second(res);
 	}).then((res)=>{
-		output.innerHTML=res;
+		output.innerHTML="Result:${res}";
 		return Third(res);
 	}).then((res)=>{
-		output.innerHTML=res;
+		output.innerHTML="Result:${res}";
 		return Fourth(res);
 	}).then((res)=>{
-		output.innerHTML=res;
+		output.innerHTML="Result:${res}";
 		return Fifth(res);
 	}).then((res)=>{
-		output.innerHTML=res;
+		output.innerHTML="Result:${res}";
 	})
 
 })
