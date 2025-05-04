@@ -4,22 +4,23 @@ let btn=document.querySelector("#btn");
 let output=document.querySelector("#output");
 
 btn.addEventListener("click",()=>{
+	output.innerHTML = "";
 	let val=Number(input.value.trim());
 	initial(val).then((res)=>{
 		
-		output.innerHTML=`Result:${res}`;
+		output.innerHTML+=`Result:${res}<br>`;
 		return second(res);
 	}).then((res)=>{
-		output.innerHTML=`Result:${res}`;
+		output.innerHTML+=`Result:${res}<br>`;
 		return Third(res);
 	}).then((res)=>{
-		output.innerHTML=`Result:${res}`;
+		output.innerHTML+=`Result:${res}<br>`;
 		return Fourth(res);
 	}).then((res)=>{
-		output.innerHTML=`Result:${res}`;
+		output.innerHTML+=`Result:${res}<br>`;
 		return Fifth(res);
 	}).then((res)=>{
-		output.innerHTML = `Final Result: ${res}`;
+		output.innerHTML += `Final Result: ${res}<br>`;
 
 	})
 
