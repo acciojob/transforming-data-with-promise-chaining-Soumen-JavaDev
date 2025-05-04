@@ -5,25 +5,22 @@ let output=document.querySelector("#output");
 
 btn.addEventListener("click",()=>{
 	let val=Number(input.value.trim());
-	initial(val).then((msg)=>{
-		output.innerHTML=msg;
-		second(msg).then((msg)=>{
-			output.innerHTML=msg;
-			Third(msg).then((msg)=>{
-			output.innerHTML=msg;
-				Fourth(msg).then((msg)=>{
-			output.innerHTML=msg;
-					Fifth(msg).then((msg)=>{
-			output.innerHTML=msg;
-		})
-		})
-		})
-		})
-	})
+	initial(val).then((res)=>{
 		
-	
-	
-
+		output.innerHTML=res;
+		return second(res);
+	}).then((res)=>{
+		output.innerHTML=res;
+		return Third(res);
+	}).then((res)=>{
+		output.innerHTML=res;
+		return Fourth(res);
+	}).then((res)=>{
+		output.innerHTML=res;
+		return Fifth(res);
+	}).then((res)=>{
+		output.innerHTML=res;
+	})
 
 })
 function initial(val){
